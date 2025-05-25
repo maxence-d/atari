@@ -1,4 +1,11 @@
 machines/
+stella/
 dasm.exe
 SDL2.dll
 z26.exe
+*.bin
+*.lst
+*.sym
+vcs.h
+macro.h
+.project

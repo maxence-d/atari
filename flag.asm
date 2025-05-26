@@ -45,11 +45,11 @@ VSync
 
 	; 37 lines of blank
 	ldx #37
-Blank	
+ABlank	
 	sta WSYNC 
 	dex
 	cpx 0
-	bne Blank
+	bne ABlank
 	
 
 Blue	= $94
@@ -97,36 +97,12 @@ RLoop
 	sta VBLANK
 	
 	; 30 lines of blank
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
-	sta WSYNC 
+	ldx #30
+BBlank
+	dex
+	sta WSYNC
+	cpx 0
+	bne BBlank
 
 	jmp SOF
 	
